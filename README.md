@@ -22,8 +22,18 @@ Follow the guide on [GitHub Help - Fork a Repo](https://help.github.com/articles
 ```
 poetry install 
 ```
+4. Create a `.env` file in the root of the project
 
-4. Get your database set up 
+The `.env` file should look something everything in the `.env.example` file provided. You'll need to replace the placeholders with your own api credentials.
+
+
+5. Create a secrets file `secrets.py` in the `pyconafrica` directory.
+
+The `secrets.py` file will contain sensitive data like API keys, secret keys, and other credentials. You'll need to replace the placeholders with your own values. Look at the `secrets.py.example` file provided to get an idea of what the `secrets.py` file should look like.
+
+
+
+6. Get your database set up 
 
 ```
 # open a poetry shell. This activates the virtual environment associated with the project 
@@ -37,7 +47,7 @@ poetry shell
 python manage.py migrate 
 ```
 
-5. Now everything is set up; you can run the application
+7. Now everything is set up; you can run the application
 
 ```
 # If your virtual environment is not active, then activate it
